@@ -13,7 +13,7 @@
 
 class Memkith < Formula
   desc "Multiplayer context for AI coding agents"
-  homepage "https://github.com/sakshambedi/memkith"
+  homepage "https://github.com/memkith/memkith"
   version "0.1.0b2"
   license "MIT"
 
