@@ -10,13 +10,13 @@
 class Memkith < Formula
   desc "Multiplayer context for AI coding agents"
   homepage "https://github.com/memkith/memkith"
-  version "0.1.0b2"
+  version "0.1.0b6"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/memkith/memkith/releases/download/v#{version}/memkith-v#{version}-darwin-arm64.tar.gz"
-      sha256 "93ab0c9e3c1946b45b178aef3c684a80b46394a94dc7a4ed099e87438dcefc2f"
+      url "https://release.memkith.com/memkith-v#{version}-darwin-arm64.tar.gz"
+      sha256 "bbe05bc5f2278905bcea36771224aa1b6d71ee45aa8ed74d6497fd59fc38a2cb"
     end
   end
 
