@@ -2,7 +2,7 @@
 #
 # This file is the source of truth. On every `v*` tag, CI in
 # memkith/memkith renders this file with the real artifact SHA
-# substituted for f51084e99470e75ad3be5c235d26d194801ca5b6d8bd06847e36f0d61e07a6d8 and pushes the result to
+# substituted for 30992622b1abb43cabcbf5c5f5616f702d406562c0e8ad42f9670517758e344c and pushes the result to
 # memkith/homebrew-memkith. Do not hand-edit the live tap copy;
 # edit this file instead.
 #
@@ -19,7 +19,7 @@
 class Memkith < Formula
   desc "Multiplayer context for AI coding agents"
   homepage "https://github.com/memkith/memkith"
-  version "0.1.0b7"
+  version "0.1.0b8"
   license "MIT"
 
   # Apple Silicon only — there's no Intel Mac build. If you're on x86_64
@@ -29,13 +29,15 @@ class Memkith < Formula
 
   # Hosted on Cloudflare R2 at the release.memkith.com custom domain.
   url "https://release.memkith.com/memkith-v#{version}-darwin-arm64.tar.gz"
-  sha256 "f51084e99470e75ad3be5c235d26d194801ca5b6d8bd06847e36f0d61e07a6d8"
+  sha256 "30992622b1abb43cabcbf5c5f5616f702d406562c0e8ad42f9670517758e344c"
 
   def install
     bin.install "memkith"
+    bin.install_symlink bin/"memkith" => "memkith-mcp"
   end
 
   test do
     assert_match "Multiplayer context", shell_output("#{bin}/memkith --help")
+    assert_predicate bin/"memkith-mcp", :exist?
   end
 end
