@@ -2,14 +2,14 @@
 class MemkithBeta < Formula
   desc "Multiplayer context for AI coding agents"
   homepage "https://memkith.com"
-  version "0.2.0b3"
+  version "0.2.0b5"
   license "Apache-2.0"
 
   conflicts_with "memkith", because: "both install memkith"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://beta-release.memkith.com/memkith-v0.2.0b3-darwin-arm64.tar.gz"
-    sha256 "ca48189d302056ea1e181ff56b662b2abf6a6796ec3c4f66fc07758f28f41f0a"
+    url "https://beta-release.memkith.com/memkith-v0.2.0b5-darwin-arm64.tar.gz"
+    sha256 "295f7bc6468a20922a46d6baa26889935c9b7c0c3081a2f3278b0e44278dcb0f"
   else
     odie "Memkith has no native build for this platform"
   end
